@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: whitesmoke;
+}
+
+body {
+  background: #1e1e1e;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 250px;
+  height: 400px;
+  perspective: 600px;
+}
+
+.card:hover .recto {
+  transform: rotateY(-180deg);
+}
+
+.recto {
+  border: solid 10px whitesmoke;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: 1s;
+}
+
+.verso {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: solid 10px whitesmoke;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transition: 1s;
+}
+
+.card:hover .verso {
+  transform: rotateY(0);
+}
+
+.details {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.social-icon {
+  padding: 10px;
+}
+
+.social-icon a {
+  display: inline-block;
+  width: 36px;
+  background: #333;
+  color: whitesmoke;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.social-icon a .fa-brands {
+  line-height: 36px;
+}
+
+.social-icon a:hover {
+  background: rgb(104, 240, 215);
+}
+
+.social-icon a:hover i {
+  color: #333;
+  transition: 0.5s;
+}
